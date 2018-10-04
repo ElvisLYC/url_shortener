@@ -10,7 +10,7 @@ RSpec.describe UrlsController, type: :controller do
   end
 
   describe "POST #create" do
-    let( :valid_params )          { { url: { long_url: "http://example.com" }} }
+    let( :valid_params )          { { url: { long_url: "http://example.com/thisisatest" }} }
     let( :invalid_params )        { { url: { long_url: "google" }} }
 
 

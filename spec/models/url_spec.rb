@@ -1,4 +1,5 @@
 require 'rails_helper'
+# require_relative "models/url"
 
 RSpec.describe Url, type: :model do
 	let(:proper_long_url)		{ 'http://www.google.com' }
@@ -35,6 +36,7 @@ RSpec.describe Url, type: :model do
 
 	context "self.retrieve_short_url: " do
 		it "takes in one valid long_url" do
+			Url.create(long_url: proper_long_url, short_url: proper_short_url)
 			expect{ Url.retrieve_short_url(proper_long_url) }.not_to raise_error
 		end
 

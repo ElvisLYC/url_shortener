@@ -1,0 +1,14 @@
+<%= form_for @urls do |url| %>
+    <p>
+      <%= url.label :long_url %><br>
+      <%= url.text_area :long_url %>
+    </p>
+    <p>
+      <%= url.label :short_url %><br>
+      <%= url.text_area :short_url %>
+    </p>
+    <p>
+      <%= url.submit %>
+    </p>
+
+<% end %>
